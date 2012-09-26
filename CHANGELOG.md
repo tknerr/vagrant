@@ -1,3 +1,22 @@
+## 1.0.5 (September 18, 2012)
+
+  - Work around a critical bug in VirtualBox 4.2.0 on Windows that
+    causes Vagrant to not work. [GH-1130]
+  - Plugin loading works better on Windows by using the proper
+    file path separator.
+  - NFS works on Fedora 16+. [GH-1140]
+  - NFS works with newer versions of Arch hosts that use systemd. [GH-1142]
+
+## 1.0.4 (September 13, 2012)
+
+  - VirtualBox 4.2 driver. [GH-1120]
+  - Correct `ssh-config` help to use `--host`, not `-h`.
+  - Use "127.0.0.1" instead of "localhost" for port checking to fix problem
+    where "localhost" is not properly setup. [GH-1057]
+  - Disable read timeout on Net::HTTP to avoid `rbuf_fill` error. [GH-1072]
+  - Retry SSH on `EHOSTUNREACH` errors.
+  - Add missing translation for "saving" state. [GH-1110]
+
 ## 1.0.3 (May 1, 2012)
 
   - Don't enable NAT DNS proxy on machines where resolv.conf already points
